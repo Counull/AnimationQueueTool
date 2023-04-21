@@ -31,8 +31,8 @@
     private CommandQueueTool _commandQueue;
     ...
     _commandQueue = new CommandQueueToolAutoCoroutine(gameObject); //此处使用具体实现初始化该类
-    bonusExitFlagCommand = new FlagFuncCommand();
-    _commandQueue.AddCommand(bonusExitFlagCommand); //添加命令
+    flagCommand = new FlagFuncCommand();
+    _commandQueue.AddCommand(flagCommand); //添加命令
     _commandQueue.Start();//开始执行命令
     _commandQueue.OnAllCommandExecComplete += () =>
             {
